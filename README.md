@@ -3,13 +3,15 @@
 
 Tutorial on Large Scale Data Analytics - SciPy US 2021
 
+### Date: July 13th from 2 to 6pm CDT
+
 ## SciPy US 2021
 
-Welcome to ___(D)Ask Me Anything About Data Analytics at Scale___, a SciPy 2021 tutorial where we will be learning about how to deconstruct static and dynamic dashboards and put new ones together; how to save dashboards for the purpose of sharing them with colleagues and friends, and how to share our insights in a deployed version of our interactive dashboards.
+Welcome to ___(D)Ask Me Anything About Data Analytics at Scale___, a SciPy US 2021 tutorial where we will be learning about how to conduct exploratory data analysis at scale, how to create dashboards with data that does not fit in memory, and how to do hypothesis testing.
+
+**Important Note:** The current repo only contains the instructions to get set up and ready for the tutorial on July 13th from 2 to 6pm CDT. The **notebooks**, **the presentation**, **the data**, and a **binder link**, in case you prefer to use a cloud environment for the tutorial, will be available on or before July 1st.
 
 # Table of Contents
-
-
 
 1. Outline for the Tutorial
 2. Prerequisites
@@ -18,6 +20,7 @@ Welcome to ___(D)Ask Me Anything About Data Analytics at Scale___, a SciPy 2021 
 5. Presentation (link below)
 6. Data
 7. Notebooks
+    - 00 Flash Intro
     - 01 Static Dashboards
     - 02 Interactive Dashboars
     - 03 Dashboard Deployment
@@ -27,65 +30,66 @@ Welcome to ___(D)Ask Me Anything About Data Analytics at Scale___, a SciPy 2021 
 
 Run this tutorial on Binder
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ramonprz01/pycon21-dashboards-4-all/master)
+[![Binder](https://mybinder.org/badge_logo.svg)]()
 
 ## 1. Outline for the Tutorial
 
-The time budgeted for this tutorial is about 3.5 hours including breaks. The tutorial will follow, as best as possible, the following schedule.
-1. **Introduction and Setup | 3:00 - 3:25 (Eastern/US)**
-   - Getting the environment set up. We will be using Jupyter Lab and some of the libraries in the Python scientific stack throughout the tutorial. If you experience any difficulties getting the set up going, please let me know as soon as possible. Otherwise, you can also access all of the content through Binder using the following link and we can work on your setup during one of the breaks.
-   - Presentation including
-     - A breakdown of the session
-     - Introduction to DataViz
-     - Introduction to Dashboards
-     - Intro to the tools for the session
-2. **5-minute break**
-3. **Static Dashbords | 3:30 - 4:20 (Eastern/US)**
+The time budgeted for this tutorial is about 3.5 hours including breaks. We will follow, as best as possible, the following schedule.
+1. **Introduction and Setup | 2:00 - 2:30 (Central/US)**
+   - Getting the environment set up. We will be using Jupyter Lab and some of the libraries in the Python scientific stack throughout the tutorial. If you experience any difficulties getting fully setup for the lessons ahead, please let me know as soon as possible. Otherwise, I know that having zoom and using all of the cores in your machine can make things slow down quite dramatically, and because of this, you can also access all of the content for the session through Binder using the link above and we can work on your setup during the break.
+	 - Presentation including
+		 - A breakdown of the session
+		 - Exploratory Data Analysis
+		 - Questions to be Tackled
+		 - Hypothesis Testing
+		 - Dashboards
+		 - Intro to the tools for the session
+2. **Flash Intro to Dask | 2:30 - 2:50 (Central/US)**
+	- In this section, we will cover some of the basic building blocks for working with dask dataframes.
+3. **10-minute break**
+4. **Exploratory Data Analysis | 3:00 - 3:45 (Central/US)**
+   - Questions and Answers
+   - EDA Breakdown
+	   - Analysis and
+	   - Visualisations
+   - Exercise (10-min)
+5. **15-minute break**
+6. **Hypothesis Testing | 4:00 - 4:40 (Central/US)**
    - The Dashboard
    - Scenario
    - Use Cases
-   - The Data
-   - Top-Down Static Dashboard Breakdown
    - Exercise (7-min)
-4. **10-minute break**
-5. **Interactive Dashboards | 4:30 - 5:20 (Eastern/US)**
-   - The Dashboard
-   - Scenario
-   - Use Cases
-   - The Data
-   - Top-Down Interactive Dashboard Breakdown
-   - Exercise (7-min)
-6. **15-minute break**
-7. Deploying Dashboard | 5:35 - 6:30 (Eastern/US)
-   - Scenario
-   - Intro to the dataset
-   - Mixed dashboard creation and deployment
-   - Deployment Elements Breakdown
-   - Deployment
-   - Exercise (7-min)
-
+7. **10-minute break**
+8. **Dashboards | 4:50 - 5:40 (Central/US)**
+	-  Interactive dashboard overview
+	-  Datashader and Holoviews overview
+	-  Top-Down Interactive Dashboard Breakdown
+	-  Exercises (10-min). For these exercises, you will be given a dashboard with 3-5 visualizations as well as the dataset, and your task is to reverse engineer any of the visualizations in the dashboard using Dask, datashader, and holoviews
 
 
 ## 2. Prerequisites (P) and Good To Have's (GTH)
 
-- **(P)** Attendees for this tutorial are expected to be familiar with Python (1 year of coding). 
-- **(P)** Participants should be comfortable with loops, functions, lists comprehensions, and if-else statements.
-- **(GTH)** While it is not necessary to have knowledge of dask, pandas, NumPy, bokeh, and Holoviews, a bit of experience with these libraries would be very beneficial throughout this tutorial.
-- **(P)** Participants should have at least 6 GB of free memory in their computers.
-- **(GTH)** While it is not required to have experience with an integrated development environment like Jupyter Lab, this would be very beneficial for the session
+The target audience for this session includes analysts of all levels, developers, data scientists, and engineers wanting to learn how to analyze large amounts of data that don’t fit into the memory RAM of their computers.
 
+The tutorial is at the intermediate level and the following are some of the Prerequisites (P) and Good To Have's (GTH)
 
+  - **(P)** 1 year of coding in Python.
+  - **(P)** Participants should be comfortable with loops, functions, lists comprehensions, and if-else statements.
+  - **(GTH)** While it is not necessary to have knowledge of dask, pandas, NumPy, datashader, and Holoviews, a bit of experience with (or some exposure to) these libraries would be very beneficial throughout the tutorial
+  - **(P)** Please make sure to have at least 10 GB of free space in your computer.
+  - **(GTH)** While it is not required to have experience with an integrated development environment like Jupyter Lab, this would be very beneficial for the session as it is the tool we will be using all throughout.
 
 ## 3. Goals/Learning Outcomes
 
-It is okay to not understand absolutely everything in the tutorial, instead, I would like to challenge you to first, make sure you walk away with at least 2 new concepts from this lesson, and second, that you come back to it and go over the content you did not get the first time around and reinforce your understanding of it.
+It is okay to not understand absolutely everything in the tutorial, instead, I would like to challenge you to first, make sure you walk away with at least 2 new concepts from this lesson, and second, that you come back to it and go over the content you did not get the first time around. That would be one of the best ways to reinforce your understanding of of the concepts covered in this session.
 
-With that said, by the end of the tutorial you should be able to:
+With that said, by the end of the tutorial you will:
 
-1. Introduce an accessible way to reproduce dashboards
-2. Help you find a process for looking at data visualizations and figure out a way to break them down and reproduce them
-3. Create static dashboards that you can share with friends and colleagues
-4. Create interactive dashboards that your users can use to see different stories from the data
+1. Have a better understanding of EDA and Hypothesis Testing.
+2. Add a new tool for large scale data analysis to your toolkit.
+3. Have a better understanding on how to conduct data analysis at scale with Python.
+4. Understand the process for breaking apart dashboards and putting them back together with Python.
+5. Be able to find a process for looking at data visualizations and figure out a way to break them down and reproduce them.
 
 ## 4. Setup
 
@@ -100,7 +104,7 @@ Here are some of the ways in which you can get the setup for the tutorial ready.
 Open up your terminal and navigate to a directory of your choosing in your computer. Once there, run the following command.
 
 ```sh
- git clone https://github.com/ramonprz01/pycon21-dashboards-4-all.git
+ git clone https://github.com/ramonpzg/scipyus21_dask_analytics.git
 ```
 
 Conversely, you can click on the green `download` button at the top and donwload all files to your desired folder/directory. Once you download it, unzip it and move on to the second step.
@@ -110,7 +114,7 @@ Conversely, you can click on the green `download` button at the top and donwload
 To get all dependancies, packages and everything else that would be useful in this tutorial, you can recreate the environment by first going into the directory for today
 
 ```sh
-cd pycon21
+cd scipyus21_dask_analytics
 ```
 
 and then running
@@ -124,7 +128,7 @@ conda env create -f environment.yml
 Then you will need to activate your environment using the following command.
 
 ```sh
-conda activate pycon-d4a
+conda activate us_scipy21
 ```
 
 #### Fourth Step
@@ -150,9 +154,8 @@ Download the repo using the big green button on the upper right.
 Open a Jupyter Lab session inside the folder you just downloaded. You can do this through the Anaconda graphical user interface if you are on a Mac or Windows.
 
 ```sh
-cd pycon21
+cd scipyus21_dask_analytics
 jupyter lab
-
 ```
 
 Conversely, open a Jupyter Lab session anywhere you'd like and navigate to the folder you just downloaded.
@@ -163,13 +166,13 @@ Open up a terminal inside of Jupyter Lab and run either of the following command
 
 ```sh
 ## one option
-pip install -U pandas numpy dask bokeh pyarrow parquet matplotlib scipy seaborn holoviews geoviews panel geopandas
+pip install -U pandas numpy dask bokeh pyarrow parquet matplotlib scipy seaborn holoviews geoviews panel geopandas datashader
 
 ## another option
-conda install pandas numpy dask bokeh pyarrow parquet matplotlib scipy seaborn holoviews geoviews panel geopandas -c conda-forge
+conda install pandas numpy dask bokeh pyarrow parquet matplotlib scipy seaborn holoviews geoviews panel datashader geopandas -c conda-forge
 ```
 
-If you receive an error while trying to install all packages, follow the steps below.
+If you receive an error while trying to install all packages, close out of jupyter lab, shut down your serrver, and follow the steps below.
 
 ```sh
 ## create an environment
@@ -179,7 +182,7 @@ conda create --name my_env_name python=3.9 pip
 conda activate my_env_name
 
 ## install some packages
-pip install -U pandas numpy dask bokeh pyarrow parquet matplotlib scipy seaborn geopandas
+pip install -U pandas numpy dask bokeh pyarrow parquet matplotlib scipy seaborn jupyterlab
 
 ## install the holoviz suite one by one
 conda install -c pyviz panel -y
@@ -188,6 +191,10 @@ conda install -c pyviz geoviews -y
 conda install datashader -y
 conda install -c ioam param -y
 conda install -c pyviz hvplot -y
+conda install geopandas -y
+
+## open up jupyter lab
+jupyter lab
 ```
 
 Great work! Now navigate to notebook 01 and open it.
@@ -196,7 +203,7 @@ Great work! Now navigate to notebook 01 and open it.
 
 ## 5. Presentation
 
-Link to Presentation
+Link to Presentation (**Upcomming!**)
 
 
 
@@ -204,13 +211,7 @@ Link to Presentation
 
 For this tutorial, we will be using the following datasets.
 
-- Domain’s Melbourne Housing Market
-
-![inside_airbnb](images/kaggle_melb_auctions.png)
-
-This dataset contains information about housing auctions from 2016 to 2017 in the metropolitan area of Melbourne, Victoria, Australia. The data was scraped from Domain, a popular properties solutions website.
-
-- Sydney Airbnb Data
+Airbnb Data
 
 ![inside_airbnb](images/inside_airbnb.png)
 
@@ -218,37 +219,35 @@ We will be using Airbnb data collected by a scraping tool called [Inside Airbnb]
 
 The data differs slightly (or by a lot) from country to country, and from time-frame to time-frame. Niether fact should be surprising, the former might be due to different countries having different regulations that may or may not prevent Airbnb from posting the same information regarding a listing. The latter makes sense as we would expect Airbnb to continue to improve its business from year-to-year and change the information collected from a listing and its host.
 
-You can download all datasets using the following link.
+You can download all datasets using the following link. (**Upcoming!**)
 
-Create a folder called `data` and add to it the folders in the following link using their respective names, `static` and `interactive`. Please make sure to add this new directory to the same folder you will be using for this tutorial.
 
-### [LINK to the Data](https://web.tresorit.com/l/fk31I#ojoRDOFvtbWXSxiAmSF1sw)
 
 ## 7. Notebooks
 
 The tutorial is contains a presentation and the following notebooks.
 
-- **01 Static Dashboards** - In this notebook we will cover how to decunstruct and put back together a static dashboard to share with friends and colleagues.
-- **02 Interactive Dashboars** - In this notebook, we will get a bit more technical and add interactive components to our dashboard as we deconstruct it and put it back together.
-- **03 Dashboard Deployment** - This notebook is all about how to create a small application with our dashboards.
-
-
-
+- **00 Flash Intro** - A quick introduction to Dask and some of its major APIs.
+- **01 Exploratory Data Analysis** - this notebook covers exploratory data analysis and visualisation at scale.
+- **02 Hypothesis Testing** - This notebook gives an overview on how to do hypothesis testing at scale.
+- **03 Dashboards** - In this notebook we will cover how to decunstruct and put back together an interactive dashboard that we can share with friends and colleagues.
 
 ## 8. Acknowledgements
 
-The work in this tutorial was made possible because of the many talented people who have invested invaluable time and effort in building these great tools for the Python ecosystem. So many thanks to the pandas, NumPy, bokeh, HoloViz, and all others teams who I have not mentioned.
+The work in this tutorial was made possible because of the many talented people who have invested invaluable time and effort in building these great tools for the Python ecosystem. Many thanks to the core developers of dask, HoloViz, pandas, NumPy, bokeh, and all others teams from libraries that I have not mentioned.
 
 ## 9. Additional Resources
 
 Here are a few great resources to get started with data analytics, data visualisation, and dashboard creation. The first three, in particular, have guided my thinking and helped very much polished the content you have found in this tutorial.
 
+- [Data Science with Python and Dask](https://www.manning.com/books/data-science-with-python-and-dask?query=dask) by Jesse C. Daniel
 - [Fundamentals of Data Visualisation](https://clauswilke.com/dataviz/) by Claus O. Wilke
 - [The Big Book of Dashboards](http://bigbookofdashboards.com/) by Steve Wexler, Jeffrey Shaffer, and Andy Cotgreave
+- [# Practical Statistics for Data Scientists: 50+ Essential Concepts Using R and Python](https://www.amazon.com.au/Practical-Statistics-Data-Scientists-2e/dp/149207294X/ref=sr_1_1?dchild=1&keywords=Practical+Statistics+for+Data+Scientists+second+edition&qid=1624278273&s=books&sr=1-1) by Peter Bruce, Andrew Bruce, and Peter Gedeck
 - [Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython](https://www.amazon.com/gp/product/1491957662/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=quantpytho-20&creative=9325&linkCode=as2&creativeASIN=1491957662&linkId=ea8de4253cce96046e8ab0383ac71b33) by Wes McKinney
 
 ## 10. Feedback 😃
 
 If you liked or disliked this tutorial and would like to give me your feedback so that I can improve it, I would greatly appreciate that.
 
-> # [Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLSdktVFANUw0uTsjXXgUcR2zRIW7RYt0uC-0FWnr3V2nYoXfjQ/viewform?usp=sf_link)
+> # [Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLSd5xBzNFs0XDLFfV07ibCGOLwaE6M8JFnGOBRlwlg__Bjzm5w/viewform?usp=sf_link)
