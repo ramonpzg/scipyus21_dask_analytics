@@ -9,7 +9,7 @@ Tutorial on Large Scale Data Analytics - SciPy US 2021
 
 Welcome to ___(D)Ask Me Anything About Data Analytics at Scale___, a SciPy US 2021 tutorial where we will be learning about how to conduct exploratory data analysis at scale, how to create dashboards with data that does not fit in memory, and how to do hypothesis testing.
 
-**Important Note:** The current repo only contains the instructions to get set up and ready for the tutorial on July 13th from 2 to 6pm CDT. The **notebooks**, **the presentation**, **the data**, and a **binder link**, in case you prefer to use a cloud environment for the tutorial, will be available on or before July 6th.
+**Important Note:** The current repo only contains the instructions to get set up and ready for the tutorial on July 13th from 2 to 6pm CDT. The **notebooks**, **the presentation**, **the data**, and a **binder link**, in case you prefer to use a cloud environment for the tutorial, will be available on or before July 9th.
 
 # Table of Contents
 
