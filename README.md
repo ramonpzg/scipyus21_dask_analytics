@@ -9,7 +9,7 @@ Tutorial on Large Scale Data Analytics - SciPy US 2021
 
 Welcome to ___(D)Ask Me Anything About Data Analytics at Scale___, a SciPy US 2021 tutorial where we will be learning about how to conduct exploratory data analysis at scale, how to create dashboards with data that does not fit in memory, and how to do hypothesis testing.
 
-**Important Note:** The current repo only contains the instructions to get set up and ready for the tutorial on July 13th from 2 to 6pm CDT. The **notebooks**, **the presentation**, **the data**, and a **binder link**, in case you prefer to use a cloud environment for the tutorial, will be available on or before July 9th.
+**Important Note:** The current repo only contains the data and the instructions to get set up and ready for the tutorial on July 13th from 2 to 6pm CDT. The **notebooks**, **the presentation**, and a **binder link**, in case you prefer to use a cloud environment for the tutorial, will be available on the day of the tutorial. **Please download the data and set up your environment before the tutorial, and please let me know through email or slack if you have any issues with anything.**
 
 # Table of Contents
 
@@ -219,9 +219,9 @@ We will be using Airbnb data collected by a scraping tool called [Inside Airbnb]
 
 The data differs slightly (or by a lot) from country to country, and from time-frame to time-frame. Niether fact should be surprising, the former might be due to different countries having different regulations that may or may not prevent Airbnb from posting the same information regarding a listing. The latter makes sense as we would expect Airbnb to continue to improve its business from year-to-year and change the information collected from a listing and its host.
 
-You can download all datasets using the following link. (**Upcoming!**)
+You can download all datasets using the following link. Please make sure to have both folders in a directory called `data`.
 
-
+## [Link to the data](https://web.tresorit.com/l/UXDoX#ZuoA2N-snD1tD_fZs5J_Qw)
 
 ## 7. Notebooks
 
