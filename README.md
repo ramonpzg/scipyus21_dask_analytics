@@ -31,7 +31,7 @@ Welcome to ___(D)Ask Me Anything About Data Analytics at Scale___, a SciPy US 20
 
 Run this tutorial on Binder
 
-[![Binder](https://mybinder.org/badge_logo.svg)]()
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ramonpzg/scipyus21_dask_analytics/master)
 
 ## 1. Outline for the Tutorial
 
